@@ -32,7 +32,7 @@
                 style="@style/MainMenuItemIcon"
                 android:src="@drawable/main_menu_lesson_icon" />
 
-            <com.qhvv.englishpuzzle.control.EffectfulImageView
+            <com.qhvv.englishpuzzle.control.EffectImageView
                 style="@style/MainMenuItemButton"
                 android:adjustViewBounds="true"
                 android:onClick="onLessonClicked"
@@ -43,7 +43,7 @@
             style="@style/MainMenuItemRow"
             android:gravity="right">
 
-            <com.qhvv.englishpuzzle.control.EffectfulImageView
+            <com.qhvv.englishpuzzle.control.EffectImageView
                 style="@style/MainMenuItemButton"
                 android:onClick="onExerciseClicked"
                 android:src="@drawable/main_menu_exercise_button" />
@@ -59,7 +59,7 @@
                 style="@style/MainMenuItemIcon"
                 android:src="@drawable/main_menu_quiz_icon" />
 
-            <com.qhvv.englishpuzzle.control.EffectfulImageView
+            <com.qhvv.englishpuzzle.control.EffectImageView
                 style="@style/MainMenuItemButton"
                 android:onClick="onPuzzleClicked"
                 android:src="@drawable/main_menu_quiz_button" />
@@ -69,7 +69,7 @@
             style="@style/MainMenuItemRow"
             android:gravity="right">
 
-            <com.qhvv.englishpuzzle.control.EffectfulImageView
+            <com.qhvv.englishpuzzle.control.EffectImageView
                 style="@style/MainMenuItemButton"
                 android:onClick="onLessonClicked"
                 android:src="@drawable/main_menu_more_app_button" />
@@ -83,12 +83,12 @@
             style="@style/MainMenuItemRow"
             android:gravity="center">
 
-            <com.qhvv.englishpuzzle.control.EffectfulImageView
+            <com.qhvv.englishpuzzle.control.EffectImageView
                 style="@style/MainMenuItemButton"
                 android:onClick="onLessonClicked"
                 android:src="@drawable/main_menu_gplus_button" />
 
-            <com.qhvv.englishpuzzle.control.EffectfulImageView
+            <com.qhvv.englishpuzzle.control.EffectImageView
                 style="@style/MainMenuItemButton"
                 android:onClick="onLessonClicked"
                 android:src="@drawable/main_menu_facebook_button" />

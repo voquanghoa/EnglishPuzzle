@@ -17,7 +17,7 @@ import com.qhvv.englishpuzzle.util.Utils;
 /**
  * Created by Vo Quang Hoa on 03/10/2015.
  */
-public class EffectfulImageView extends ImageView {
+public class EffectImageView extends ImageView {
 
     private int effectColor = 0x77eeddff;
     private OnClickListener onClickAction;
@@ -27,17 +27,17 @@ public class EffectfulImageView extends ImageView {
     private Paint paint;
     private static Typeface tf ;
 
-    public EffectfulImageView(Context context) {
+    public EffectImageView(Context context) {
         super(context);
         initView();
     }
 
-    public EffectfulImageView(Context context, AttributeSet attrs) {
+    public EffectImageView(Context context, AttributeSet attrs) {
         super(context, attrs);
         initView();
     }
 
-    public EffectfulImageView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public EffectImageView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initView();
     }
@@ -47,16 +47,16 @@ public class EffectfulImageView extends ImageView {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
-                        EffectfulImageView.this.setColorFilter(effectColor, PorterDuff.Mode.SRC_ATOP);
-                        EffectfulImageView.this.invalidate();
+                        EffectImageView.this.setColorFilter(effectColor, PorterDuff.Mode.SRC_ATOP);
+                        EffectImageView.this.invalidate();
                         break;
                     }
                     case MotionEvent.ACTION_UP:
                         clickFeedback();
-                        determinalClickEvent(event);
+                        determineClickEvent(event);
                     case MotionEvent.ACTION_CANCEL: {
-                        EffectfulImageView.this.clearColorFilter();
-                        EffectfulImageView.this.invalidate();
+                        EffectImageView.this.clearColorFilter();
+                        EffectImageView.this.invalidate();
                         break;
                     }
                 }
@@ -78,12 +78,12 @@ public class EffectfulImageView extends ImageView {
         paint.setTextSize(scale * 20);
     }
 
-    private void determinalClickEvent(MotionEvent event)
+    private void determineClickEvent(MotionEvent event)
     {
-        boolean isVaildX = event.getX()>=0 && event.getX()<=this.getWidth();
-        boolean isVaildY = event.getY()>=0 && event.getY()<=this.getHeight();
+        boolean isValidX = event.getX()>=0 && event.getX()<=this.getWidth();
+        boolean isValidY = event.getY()>=0 && event.getY()<=this.getHeight();
 
-        if(isVaildX && isVaildY)
+        if(isValidX && isValidY)
         {
             try
             {

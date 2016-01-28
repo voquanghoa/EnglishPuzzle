@@ -47,7 +47,7 @@
             android:gravity="center"
             />
     </LinearLayout>
-    <com.qhvv.englishpuzzle.control.EffectfulImageView
+    <com.qhvv.englishpuzzle.control.EffectImageView
         android:id="@+id/btDownload"
         android:layout_width="@dimen/download_button_size"
         android:layout_height="@dimen/download_button_size"

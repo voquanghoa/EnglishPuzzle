@@ -17,7 +17,7 @@
             android:text="@string/exercise"
             style="@style/TitleText"
             />
-        <com.qhvv.englishpuzzle.control.EffectfulImageView
+        <com.qhvv.englishpuzzle.control.EffectImageView
             android:layout_height="match_parent"
             android:src="@drawable/lesson_back"
             android:onClick="onHomeButtonClicked"
@@ -38,14 +38,14 @@
             android:textSize="10pt"
             style="@style/TitleText"
             />
-        <com.qhvv.englishpuzzle.control.EffectfulImageView
+        <com.qhvv.englishpuzzle.control.EffectImageView
             android:layout_alignParentRight="true"
             android:layout_height="match_parent"
             android:src="@drawable/skip_lesson"
             android:onClick="onSkipClicked"
             style="@style/ScaledImage"
             />
-        <com.qhvv.englishpuzzle.control.EffectfulImageView
+        <com.qhvv.englishpuzzle.control.EffectImageView
             android:layout_height="match_parent"
             android:src="@drawable/play_button"
             style="@style/ScaledImage"

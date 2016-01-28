@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.qhvv.englishpuzzle.R;
-import com.qhvv.englishpuzzle.control.EffectfulImageView;
+import com.qhvv.englishpuzzle.control.EffectImageView;
 import com.qhvv.englishpuzzle.controller.StorageController;
 import com.qhvv.englishpuzzle.model.LocalPackageInfo;
 
@@ -66,7 +66,7 @@ public class DownloadAdapter extends BaseAdapter {
         TextView txtPackageName = (TextView) convertView.findViewById(R.id.txtCategoryName);
         TextView txtPackInfor = (TextView)convertView.findViewById(R.id.txtCategorySize);
         TextView txtPackInforStatus = (TextView)convertView.findViewById(R.id.txtStatus);
-        EffectfulImageView btton = (EffectfulImageView)convertView.findViewById(R.id.btDownload);
+        EffectImageView btton = (EffectImageView)convertView.findViewById(R.id.btDownload);
 
         txtPackageName.setText(packageInfo.getDisplay());
         txtPackInfor.setText(String.format("Size %s, %s words",packageInfo.getSize(),""+packageInfo.getItemCount()));

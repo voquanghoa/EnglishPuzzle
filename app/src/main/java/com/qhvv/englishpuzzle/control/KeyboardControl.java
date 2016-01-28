@@ -142,8 +142,8 @@ public class KeyboardControl extends LinearLayout {
 
     }
 
-    private EffectfulImageView createKeyboardButton(char c){
-        EffectfulImageView button = (EffectfulImageView)LayoutInflater.from(getContext()).inflate(R.layout.keyboard_button_layout,null);
+    private EffectImageView createKeyboardButton(char c){
+        EffectImageView button = (EffectImageView)LayoutInflater.from(getContext()).inflate(R.layout.keyboard_button_layout,null);
         LayoutParams layoutParams = new LayoutParams(0, LayoutParams.MATCH_PARENT, 1);
         int margin_top_bottom = (int)getResources().getDimension(R.dimen.keyboard_button_margin_top_bottom);
         int margin_left_right = (int)getResources().getDimension(R.dimen.keyboard_button_margin_right_left);

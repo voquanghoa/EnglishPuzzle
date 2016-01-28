@@ -10,7 +10,7 @@ import com.qhvv.englishpuzzle.R;
  * Created by voqua on 12/13/2015.
  */
 
-public class AutoHeightControl extends EffectfulImageView {
+public class AutoHeightControl extends EffectImageView {
     private float sizeRatio = 1;
     public AutoHeightControl(Context context) {
         super(context);

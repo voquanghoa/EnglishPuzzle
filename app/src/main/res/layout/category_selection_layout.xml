@@ -5,8 +5,11 @@
     android:layout_height="match_parent"
     android:background="@drawable/common_background">
     <RelativeLayout
+        android:id="@+id/adView"
+        style="@style/TopAdsPanel" />
+    <RelativeLayout
         android:id="@+id/title"
-        android:layout_marginTop="@dimen/lesson_header_spacing_top"
+        android:layout_below="@+id/adView"
         android:background="@color/lesson_title_background"
         style="@style/LessonTitlePanel"
         >

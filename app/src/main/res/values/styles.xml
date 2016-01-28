@@ -102,6 +102,16 @@
         <item name="android:textAllCaps">true</item>
         <item name="android:textColor">#fff</item>
     </style>
+    <style name="AdsPanel">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+    <style name="TopAdsPanel" parent="AdsPanel">
+        <item name="android:layout_alignParentBottom">false</item>
+        <item name="android:layout_alignParentTop">true</item>
+    </style>
     <style name="MainMenuItemRow">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">0dp</item>

@@ -1,93 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/main_menu_bg"
-    android:weightSum="1280"
     >
-    <View
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="40" />
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="225"
-        android:src="@drawable/main_menu_header"
-        />
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="34" />
-    <LinearLayout
-        style="@style/MainMenuItemRow"
-        >
+        android:layout_height="match_parent"
+        android:layout_above="@+id/adView"
+        android:orientation="vertical"
+        android:weightSum="1200">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="40" />
+
         <ImageView
-            android:src="@drawable/main_menu_lesson_icon"
-            style="@style/MainMenuItemIcon"
-            />
-        <com.qhvv.englishpuzzle.control.EffectfulImageView
-            android:src="@drawable/main_menu_lesson_button"
-            android:adjustViewBounds="true"
-            android:onClick="onLessonClicked"
-            style="@style/MainMenuItemButton"
-            />
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="225"
+            android:src="@drawable/main_menu_header" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="34" />
+
+        <LinearLayout style="@style/MainMenuItemRow">
+
+            <ImageView
+                style="@style/MainMenuItemIcon"
+                android:src="@drawable/main_menu_lesson_icon" />
+
+            <com.qhvv.englishpuzzle.control.EffectfulImageView
+                style="@style/MainMenuItemButton"
+                android:adjustViewBounds="true"
+                android:onClick="onLessonClicked"
+                android:src="@drawable/main_menu_lesson_button" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/MainMenuItemRow"
+            android:gravity="right">
+
+            <com.qhvv.englishpuzzle.control.EffectfulImageView
+                style="@style/MainMenuItemButton"
+                android:onClick="onExerciseClicked"
+                android:src="@drawable/main_menu_exercise_button" />
+
+            <ImageView
+                style="@style/MainMenuItemIcon"
+                android:src="@drawable/main_menu_exercise_icon" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/MainMenuItemRow">
+
+            <ImageView
+                style="@style/MainMenuItemIcon"
+                android:src="@drawable/main_menu_quiz_icon" />
+
+            <com.qhvv.englishpuzzle.control.EffectfulImageView
+                style="@style/MainMenuItemButton"
+                android:onClick="onPuzzleClicked"
+                android:src="@drawable/main_menu_quiz_button" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/MainMenuItemRow"
+            android:gravity="right">
+
+            <com.qhvv.englishpuzzle.control.EffectfulImageView
+                style="@style/MainMenuItemButton"
+                android:onClick="onLessonClicked"
+                android:src="@drawable/main_menu_more_app_button" />
+
+            <ImageView
+                style="@style/MainMenuItemIcon"
+                android:src="@drawable/main_menu_more_app_icon" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/MainMenuItemRow"
+            android:gravity="center">
+
+            <com.qhvv.englishpuzzle.control.EffectfulImageView
+                style="@style/MainMenuItemButton"
+                android:onClick="onLessonClicked"
+                android:src="@drawable/main_menu_gplus_button" />
+
+            <com.qhvv.englishpuzzle.control.EffectfulImageView
+                style="@style/MainMenuItemButton"
+                android:onClick="onLessonClicked"
+                android:src="@drawable/main_menu_facebook_button" />
+        </LinearLayout>
     </LinearLayout>
-    <LinearLayout
-        android:gravity="right"
-        style="@style/MainMenuItemRow"
-        >
-        <com.qhvv.englishpuzzle.control.EffectfulImageView
-            android:src="@drawable/main_menu_exercise_button"
-            android:onClick="onExerciseClicked"
-            style="@style/MainMenuItemButton"
-            />
-        <ImageView
-            android:src="@drawable/main_menu_exercise_icon"
-            style="@style/MainMenuItemIcon"
-            />
-    </LinearLayout>
-    <LinearLayout
-        style="@style/MainMenuItemRow"
-        >
-        <ImageView
-            android:src="@drawable/main_menu_quiz_icon"
-            style="@style/MainMenuItemIcon"
-            />
-        <com.qhvv.englishpuzzle.control.EffectfulImageView
-            android:src="@drawable/main_menu_quiz_button"
-            android:onClick="onPuzzleClicked"
-            style="@style/MainMenuItemButton"
-            />
-    </LinearLayout>
-    <LinearLayout
-        android:gravity="right"
-        style="@style/MainMenuItemRow"
-        >
-        <com.qhvv.englishpuzzle.control.EffectfulImageView
-            android:src="@drawable/main_menu_more_app_button"
-            android:onClick="onLessonClicked"
-            style="@style/MainMenuItemButton"
-            />
-        <ImageView
-            android:src="@drawable/main_menu_more_app_icon"
-            style="@style/MainMenuItemIcon"
-            />
-    </LinearLayout>
-    <LinearLayout
-        android:gravity="center"
-        style="@style/MainMenuItemRow"
-        >
-        <com.qhvv.englishpuzzle.control.EffectfulImageView
-            android:src="@drawable/main_menu_gplus_button"
-            android:onClick="onLessonClicked"
-            style="@style/MainMenuItemButton"
-            />
-        <com.qhvv.englishpuzzle.control.EffectfulImageView
-            android:src="@drawable/main_menu_facebook_button"
-            android:onClick="onLessonClicked"
-            style="@style/MainMenuItemButton"
-            />
-    </LinearLayout>
-</LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/adView"
+        style="@style/AdsPanel" />
+</RelativeLayout>

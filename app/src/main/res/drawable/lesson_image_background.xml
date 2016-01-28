@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item >
+        <shape
+            xmlns:android="http://schemas.android.com/apk/res/android">
+            <stroke android:width="2dp" android:color="#fff" />
+            <solid android:color="@color/lesson_title_background" />
+            <corners android:radius="4dp"></corners>
+        </shape>
+    </item>
+    <item
+        android:top="@dimen/lesson_image_padding"
+        android:bottom="@dimen/lesson_image_padding"
+        android:left="@dimen/lesson_image_padding"
+        android:right="@dimen/lesson_image_padding"
+        >
+        <shape
+            xmlns:android="http://schemas.android.com/apk/res/android">
+            <stroke android:width="2dp" android:color="#fff" />
+            <solid android:color="#fff" />
+        </shape>
+    </item>
+</layer-list>

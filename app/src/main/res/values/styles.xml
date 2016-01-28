@@ -1,0 +1,122 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="MainMenuButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/main_menu_button_height</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:layout_marginRight">@dimen/main_menu_button_margin</item>
+        <item name="android:layout_marginLeft">@dimen/main_menu_button_margin</item>
+        <item name="android:layout_marginTop">@dimen/main_menu_buttons_spacing</item>
+        <item name="android:layout_marginBottom">@dimen/main_menu_buttons_spacing</item>
+    </style>
+    <style name="MainMenuConnectButton">
+        <item name="android:layout_marginLeft">@dimen/main_menu_soc_button_margin</item>
+        <item name="android:layout_marginRight">@dimen/main_menu_soc_button_margin</item>
+        <item name="android:layout_width">@dimen/main_menu_soc_button_size</item>
+        <item name="android:layout_height">@dimen/main_menu_soc_button_size</item>
+    </style>
+
+    <style name="CharacterStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:src">@drawable/character_bg</item>
+    </style>
+
+    <style name="KeyboardRowStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="AppTitleStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+    <style name="BottomButtonStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_margin">5dp</item>
+    </style>
+
+    <style name="ExerciseButton">
+        <item name="android:layout_margin">@dimen/exercise_button_margin</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/exercise_button_height</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <style name="ExerciseActionButton">
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_width">@dimen/exercise_play_button</item>
+        <item name="android:layout_height">@dimen/exercise_play_button</item>
+    </style>
+    <style name="AnchorButton">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">1dp</item>
+    </style>
+    <style name="LessonTitlePanel">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/lesson_header_height</item>
+        <item name="android:layout_marginBottom">@dimen/lesson_header_margin</item>
+        <item name="android:padding">@dimen/lesson_header_padding</item>
+    </style>
+    <style name="ScaledImage">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+    <style name="LessonMainImage">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/lesson_image_background</item>
+        <item name="android:layout_marginRight">@dimen/lesson_image_margin_left_right</item>
+        <item name="android:layout_marginLeft">@dimen/lesson_image_margin_left_right</item>
+        <item name="android:layout_marginBottom">@dimen/lesson_header_margin</item>
+        <item name="android:padding">@dimen/lesson_image_padding_inside</item>
+    </style>
+    <style name="GifAnimation">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:visibility">gone</item>
+    </style>
+    <style name="TitleText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+    <style name="MainMenuItemRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">180</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="MainMenuItemIcon">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:adjustViewBounds">true</item>
+    </style>
+    <style name="MainMenuItemButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:layout_margin">@dimen/main_menu_new_button_margin</item>
+    </style>
+</resources>

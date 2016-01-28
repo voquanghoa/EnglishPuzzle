@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/common_background">
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_marginTop="@dimen/lesson_header_spacing_top"
+        android:background="@color/lesson_title_background"
+        style="@style/LessonTitlePanel"
+        >
+        <TextView
+            android:text="@string/lesson"
+            style="@style/TitleText"
+            />
+        <com.qhvv.englishpuzzle.control.EffectfulImageView
+            android:layout_height="match_parent"
+            android:src="@drawable/lesson_back"
+            android:onClick="onHomeButtonClicked"
+            style="@style/ScaledImage"
+            />
+    </RelativeLayout>
+    <GridView
+        android:id="@+id/category_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_above="@+id/btDownload"
+        android:horizontalSpacing="@dimen/category_list_item_margin"
+        android:verticalSpacing="@dimen/category_list_item_margin"
+        android:layout_margin="@dimen/category_list_margin"
+        android:numColumns="2"
+        />
+
+    <com.qhvv.englishpuzzle.control.EffectfulImageView
+        android:id="@+id/btDownload"
+        android:src="@drawable/get_more"
+        android:onClick="btDownloadClicked"
+        android:layout_margin="0dp"
+        android:adjustViewBounds="true"
+        style="@style/BottomButtonStyle"
+        />
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="lesson_title_background" type="color">#4FFF</item>
+    <item name="message_correct" type="color">#70F0</item>
+    <item name="message_incorrect" type="color">#7F00</item>
+    <item name="keyboard_color" type="color">#3FFF</item>
+</resources>

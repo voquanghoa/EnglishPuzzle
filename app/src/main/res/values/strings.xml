@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">English Puzzle</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="select_category">Select category</string>
+    <string name="puzzle1">Puzzle</string>
+    <string name="download_packages">Download more categories</string>
+    <string name="loading">Loading</string>
+    <string name="cancel">Cancel</string>
+    <string name="download">Download</string>
+    <string name="lesson">Lesson</string>
+    <string name="exercise">Exercise</string>
+    <string name="exercise_text_help">Listen and choose the\n correct picture</string>
+    <string name="download_finish">Downloading finish</string>
+    <string name="download_dialog_text">Downloading</string>
+    <string name="download_dialog_title_common" formatted="false">Downloading file. Please wait...</string>
+    <string name="download_dialog_title" formatted="false">Downloading file %s, please wait...</string>
+    <string name="download_dialog_progress_message" formatted="false">Downloading %s, %.2f/%.2f Mb</string>
+    <string name="download_fail_message">Download file fail</string>
+    <string name="download_cancel">Download cancelled</string>
+    <string name="ready_download">Ready to download</string>
+    <string name="already_download">Downloaded</string>
+    <string name="refresh_list_finish">The list was updated to date</string>
+    <string name="local_file_warning">Can not access the local file.</string>
+
+    <string name="incorrect">Incorrect!</string>
+    <string name="correct">Excellent!</string>
+</resources>

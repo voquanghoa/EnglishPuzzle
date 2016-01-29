@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdListener;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.qhvv.englishpuzzle.adapter.DownloadAdapter;
@@ -55,6 +56,7 @@ public class DownloadPackageActivity extends BaseActivity implements DownloadAda
 
         loadCategoriesList();
         createLoadingDialog();
+        initAds();
     }
 
     private void showCategories(String jsonData){
@@ -108,6 +110,24 @@ public class DownloadPackageActivity extends BaseActivity implements DownloadAda
                 stopDownload();
             }
         });
+    }
+
+    private void initAds() {
+        loadFullAds();
+        mInterstitialAd.setAdListener(new AdListener() {
+            public void onAdClosed() {
+                finish();
+            }
+        });
+    }
+
+    public void onBackPressed() {
+        if (mInterstitialAd.isLoaded()) {
+            mInterstitialAd.show();
+        } else {
+            Utils.Log("DID NOT LOAD FULL SCREEN ADS");
+            super.onBackPressed();
+        }
     }
 
     public void finish() {

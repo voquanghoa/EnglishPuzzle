@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.qhvv.englishpuzzle.controller.DataController;
 import com.qhvv.englishpuzzle.model.Word;
@@ -15,12 +14,13 @@ import com.qhvv.englishpuzzle.util.Utils;
 import java.io.IOException;
 import java.util.Random;
 
-public class ExerciseSelectPictureActivity extends BaseActivity {
+public class ExerciseSelectPictureActivity extends BaseActivity{
     private View[] selectionImages;
     private boolean isAudioReady = false;
     private MediaPlayer mediaPlayer;
     private int correctAnswer;
     private TextView messageTextView;
+    private Thread stopMessageThread = null;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.select_picture_layout);
@@ -77,20 +77,38 @@ public class ExerciseSelectPictureActivity extends BaseActivity {
     public void onAnswerClicked(View view){
         int answer = Integer.parseInt(view.getTag().toString());
 
+
         if(answer == correctAnswer){
-            Toast.makeText(this, "You are correct !", Toast.LENGTH_SHORT).show();
+            messageTextView.setText(R.string.correct);
+            messageTextView.setBackgroundColor(getResources().getColor(R.color.message_correct));
         }else{
-            Toast.makeText(this, "NOT CORRECT !", Toast.LENGTH_SHORT).show();
+            messageTextView.setText(R.string.incorrect);
+            messageTextView.setBackgroundColor(getResources().getColor(R.color.message_incorrect));
         }
 
         messageTextView.setVisibility(View.VISIBLE);
+        initThread();
     }
 
-    public void run(){
-        this.runOnUiThread(new Runnable() {
-            public void run() {
-                messageTextView.setVisibility(View.INVISIBLE);
-            }
-        });
+    private void initThread(){
+        if(stopMessageThread!=null){
+            stopMessageThread.interrupt();
+            stopMessageThread = new Thread(new Runnable() {
+                public void run() {
+                    ExerciseSelectPictureActivity.this.runOnUiThread(new Runnable() {
+                        public void run() {
+                            try {
+                                Thread.sleep(100);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                            messageTextView.setVisibility(View.INVISIBLE);
+                        }
+                    });
+                    stopMessageThread = null;
+                }
+            });
+            stopMessageThread.start();
+        }
     }
 }

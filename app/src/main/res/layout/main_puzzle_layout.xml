@@ -49,6 +49,7 @@
             android:layout_alignParentRight="true"
             android:layout_height="match_parent"
             android:src="@drawable/skip_lesson"
+            android:onClick="onNextClick"
             style="@style/ScaledImage"
             />
         <com.qhvv.englishpuzzle.control.EffectImageView

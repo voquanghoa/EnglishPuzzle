@@ -96,8 +96,16 @@ public class BaseActivity extends Activity implements IWebService, DialogInterfa
 
     }
 
-    protected void showMessage(String content){
-        Toast.makeText(this, content, Toast.LENGTH_SHORT).show();
+    protected void showMessage(final int stringContentId){
+        showMessage(getString(stringContentId));
+    }
+
+    protected void showMessage(final String content){
+        this.runOnUiThread(new Runnable() {
+            public void run() {
+                Toast.makeText(BaseActivity.this, content, Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     public void onHomeButtonClicked(View view){

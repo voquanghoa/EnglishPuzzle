@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.1"
     defaultConfig {
         applicationId "com.qhvv.englishpuzzle"
-        minSdkVersion 14
+        minSdkVersion 16
         targetSdkVersion 17
         versionCode 1
         versionName "1.0"

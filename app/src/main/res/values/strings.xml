@@ -26,4 +26,5 @@
     <string name="admob_id_full_screen">ca-app-pub-8190508285797907/8872957872 </string>
     <string name="incorrect">Incorrect!</string>
     <string name="correct">Excellent!</string>
+    <string name="audio_is_not_ready_warning">Audio is not ready yet</string>
 </resources>

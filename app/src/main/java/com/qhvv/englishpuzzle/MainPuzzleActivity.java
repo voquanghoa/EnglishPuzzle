@@ -48,10 +48,17 @@ public class MainPuzzleActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_puzzle_layout);
+        categoryName = getIntent().getExtras().getString(AppConstants.CATEGORY_MESSAGE);
+        isLessonMode = (categoryName.length()!=0);
 
         initKeyboard();
+        initContentView();
+        loadAssertWords();
+    }
+
+    private void initContentView() {
         webImageView =(ImageView) findViewById(R.id.imageView);
-        categoryName = getIntent().getExtras().getString(AppConstants.CATEGORY_MESSAGE);
+
         titleText =(TextView) findViewById(R.id.title_tv);
         imageCorrect = (GifImageView)findViewById(R.id.image_correct);
         imageWrong =(GifImageView)findViewById(R.id.image_wrong);
@@ -60,10 +67,6 @@ public class MainPuzzleActivity extends BaseActivity {
         mainContent = (RelativeLayout) findViewById(R.id.main_screen);
         animOvershoot = AnimationUtils.loadAnimation(this, R.anim.overshoot);
         animBonce = AnimationUtils.loadAnimation(this, R.anim.bonce);
-
-        isLessonMode = (categoryName.length()!=0);
-
-        loadAssertWords();
     }
 
     private void initKeyboard(){
@@ -175,13 +178,18 @@ public class MainPuzzleActivity extends BaseActivity {
         }
     }
 
+    public void onNextClick(View view){
+        loadAssertWords();
+        keyboardControl.clearInput();
+    }
+
     public void onAudioClick(View view){
         if(isAudioReady){
             if(!mediaPlayer.isPlaying()){
                 mediaPlayer.start();
             }
         }else{
-            showMessage("Audio was not ready yet.");
+            showMessage(R.string.audio_is_not_ready_warning);
         }
     }
 }
